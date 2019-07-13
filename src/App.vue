@@ -129,7 +129,7 @@ export default {
   mounted: function () {
     this.$nextTick(function () { //ビュー全体がレンダリングされた後にのみ実行されるコード
       //tokyo
-      axios.get("https://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&units=metric&appid=f632841c19fe9de0df3f4075e860a60d")
+      axios.get("https://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp&units=metric&appid=APPID")
       .then( (response) => {
         this.imgUrl_t = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png";
         this.card_title_t = response.data.name;
@@ -150,7 +150,7 @@ export default {
       });
 
       //london
-      axios.get("https://api.openweathermap.org/data/2.5/weather?q=London,GB&units=metric&appid=f632841c19fe9de0df3f4075e860a60d")
+      axios.get("https://api.openweathermap.org/data/2.5/weather?q=London,GB&units=metric&appid=APPID")
       .then( (response) => {
         this.imgUrl_l = "https://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png";
         this.card_title_l = response.data.name;
